@@ -22,28 +22,16 @@ class IntroScreen extends StatelessWidget {
           children: [
             Image.asset("assets/images/creative.png", width: double.infinity),
             Text("onboardingTitle".tr(),
-              style: GoogleFonts.inter(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Colors.blue,
-              ),
+              style: Theme.of(context).textTheme.bodySmall,
             ),
             Text("onboardingSubtitle".tr(),
-              style: GoogleFonts.inter(
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
-                color: Colors.black,
-              ),
+              style: Theme.of(context).textTheme.displayMedium,
             ),
             Row(
               children: [
                 Text(
                   "language".tr(),
-                  style: GoogleFonts.inter(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.blue,
-                  ),
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 Spacer(),
                 Container(
@@ -96,11 +84,7 @@ class IntroScreen extends StatelessWidget {
               children: [
                 Text(
                   "theme".tr(),
-                  style: GoogleFonts.inter(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
-                    color: Colors.blue,
-                  ),
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 Spacer(),
                 Container(
@@ -140,18 +124,15 @@ class IntroScreen extends StatelessWidget {
             ),
             SizedBox( width: double.infinity,
               child: ElevatedButton( style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.blue,
-            ),
+            backgroundColor: Theme.of(context).colorScheme.primary,
+
+              ),
                 onPressed: () {},
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 16),
                   child: Text(
                     "let'sStart".tr(),
-                    style: GoogleFonts.inter(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                      color: Colors.white,
-                    ),
+                    style: Theme.of(context).textTheme.displayLarge,
                   ),
                 ),
               ),

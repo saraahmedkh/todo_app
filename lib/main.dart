@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:todo_app/core/my_theme_data.dart';
 import 'package:todo_app/screens/intro_screen.dart';
 import 'package:todo_app/screens/login_screen.dart';
 
@@ -25,10 +26,14 @@ class MyApp extends StatelessWidget {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       debugShowCheckedModeBanner: false,
+      theme: MyThemeData.lighttheme,
+      darkTheme: MyThemeData.Darktheme,
+      themeMode: ThemeMode.light,
       initialRoute: IntroScreen.routeName,
       routes: {
         IntroScreen.routeName: (c) => IntroScreen(),
         LoginScreen.routeName: (c) => LoginScreen(),
+
       },
     );
   }
