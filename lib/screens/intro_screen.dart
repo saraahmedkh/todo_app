@@ -1,13 +1,153 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class IntroScreen extends StatelessWidget {
-  static const String routeName="IntroScreen";
+  static const String routeName = "IntroScreen";
+
   const IntroScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+      appBar: AppBar(
+        centerTitle: true,
+        title: Image.asset("assets/images/logo.png"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          spacing: 28,
+          children: [
+            Image.asset("assets/images/creative.png", width: double.infinity),
+            Text(
+              "Personalize Your Experience",
+              style: GoogleFonts.inter(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color: Colors.blue,
+              ),
+            ),
+            Text(
+              "Choose your preferred theme and language to get started with a comfortable, tailored experience that suits your style.",
+              style: GoogleFonts.inter(
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+                color: Colors.black,
+              ),
+            ),
+            Row(
+              children: [
+                Text(
+                  "Language",
+                  style: GoogleFonts.inter(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.blue,
+                  ),
+                ),
+                Spacer(),
+                Container(
+                  decoration: BoxDecoration(
+                    border: BoxBorder.all(color: Colors.blue, width: 2),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: Row(
+                    spacing: 8,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          border: BoxBorder.all(width: 4, color: Colors.blue),
+                        ),
+                        child: Image.asset(
+                          "assets/images/EN.png",
+                          fit: BoxFit.fill,
+                          height: 30,
+                          width: 30,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 4),
+                        child: Image.asset(
+                          "assets/images/EG.png",
+                          fit: BoxFit.fill,
+                          width: 30,
+                          height: 30,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Text(
+                  "Theme",
+                  style: GoogleFonts.inter(
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.blue,
+                  ),
+                ),
+                Spacer(),
+                Container(
+                  decoration: BoxDecoration(
+                    border: BoxBorder.all(color: Colors.blue, width: 2),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: Row(
+                    spacing: 8,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius: BorderRadius.circular(50),
+                          border: BoxBorder.all(width: 4, color: Colors.blue),
+                        ),
+                        child: Image.asset(
+                          "assets/images/Sun.png",
+                          fit: BoxFit.fill,
+                          height: 30,
+                          width: 30,
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 4),
+                        child: Image.asset(
+                          "assets/images/Moon.png",
+                          fit: BoxFit.fill,
+                          width: 30,
+                          height: 30,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            SizedBox( width: double.infinity,
+              child: ElevatedButton( style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.blue,
+            ),
+                onPressed: () {},
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 16),
+                  child: Text(
+                    "Let’s Start",
+                    style: GoogleFonts.inter(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

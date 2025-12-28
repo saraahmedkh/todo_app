@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp( debugShowMaterialGrid: false,
+    return MaterialApp( debugShowCheckedModeBanner: false,
       initialRoute: IntroScreen.routeName,
       routes: {
         IntroScreen.routeName: (c) => IntroScreen(),
